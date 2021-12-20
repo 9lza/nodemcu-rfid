@@ -22,12 +22,12 @@ Servo myServo;
 /**********************/
 
 /************************配置******************************/
-char auth[] = "8ad13e9b9cee"; //点灯密钥
-char ssid[] = "Device";       // WiFi名称
-char pswd[] = "qwer1234";     // WiFi密码
+char auth[] = ""; //点灯密钥
+char ssid[] = "";       // WiFi名称
+char pswd[] = "";     // WiFi密码
 
-const char *AP_ssid = "4706";         //要创建的热点名
-const char *AP_password = "qwer4706"; //创建的热点密码
+const char *AP_ssid = "";         //要创建的热点名
+const char *AP_password = ""; //创建的热点密码
 
 #define RST_PIN 5                 // 配置rst针脚
 #define SS_PIN 4                  // 配置ss针脚
@@ -364,7 +364,7 @@ uint8_t Validation_ID(byte user_sum, const byte user_uid[])
 
 void Close_Root() //关闭管理员模式，保存数据到flash
 {
-    EEPROM.begin(8102); // Blinker 已经使用了0-2447
+    EEPROM.begin(3000); // Blinker 已经使用了0-2447
     Root_Model = 0;
     for (uint8_t i = 4; i < Max_User_Sum * 4 + 4; i++)
     {
