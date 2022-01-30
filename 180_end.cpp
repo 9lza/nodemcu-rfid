@@ -55,7 +55,7 @@ MFRC522::MIFARE_Key key;
 
 byte nuidPICC[4];
 #define Max_User_Sum 10                                        //最大用户数，不包括管理员
-byte UserUid[Max_User_Sum * 4 + 4] = {0x8A, 0xC7, 0xC4, 0x3B}; //用于存放用户的ID,前4个字节不变为管理员ID卡
+byte UserUid[Max_User_Sum * 4 + 4] = {0xXX, 0xXX, 0xXX, 0xXX}; //用于存放用户的ID,前4个字节不变为管理员ID卡
 byte User_Sum = 1;                                             //当前用户的总数
 
 void printHex(byte *buffer, byte bufferSize) //用户ID转换类型
